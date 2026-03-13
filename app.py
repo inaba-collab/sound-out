@@ -21,7 +21,7 @@ def synthesize_speech(text, lang='日本語', gender='default'):
         '日本語': 'ja-JP'
     }
 
-    client = texttospeech.TextToSpeechClient()
+    client = texttospeech.TextToSpeechClient(credentials=credentials)
 
     #文章を書き込む
     synthesis_input = texttospeech.SynthesisInput(text=text)
