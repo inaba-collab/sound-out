@@ -4,7 +4,7 @@ from google.cloud import texttospeech
 import io
 import streamlit as st
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'secret.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = st.secrets['gcp_service_sccoun']
 
 def synthesize_speech(text, lang='日本語', gender='default'):
 
